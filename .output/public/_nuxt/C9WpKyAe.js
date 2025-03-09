@@ -1,1 +1,0 @@
-import{_ as e}from"./B73dY796.js";import{d as o,t as n,z as a,P as t,a3 as s,v as r}from"./CdwcfL1k.js";const u=o({__name:"contact",setup(c){return(m,l)=>(r(),n(s,null,[a(t(e),{"model-value":33}),a(t(e),{"model-value":73,class:"mt-20"})],64))}});export{u as default};

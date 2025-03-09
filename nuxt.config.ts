@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
   app: {
-    baseURL: '/portfolio-mahmor/mahmor-mustapa' // Must match your GitHub repository name
+    baseURL: '/portfolio-mahmor/' // Must match your GitHub repository name
   },
   nitro: {
     preset: 'static' // Ensures Nuxt generates a static site for GitHub Pages

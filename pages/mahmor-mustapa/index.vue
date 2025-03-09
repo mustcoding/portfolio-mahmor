@@ -6,9 +6,9 @@ const basePath = config.app.baseURL || "";
 
 <template>
   <Layout>
-    <div class="space-y-16 lg:grid grid-cols-2 place-items-center h-screen">
+    <div class="space-y-16 lg:grid grid-cols-2 justify-center items-center h-screen">
       <!-- Avatar -->
-      <div>
+      <div class="flex justify-center items-center">
         <Avatar
           class="w-52 h-52 mt-10 md:w-96 md:h-96 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
         >

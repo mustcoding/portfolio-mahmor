@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
   app: {
-    baseURL: '/portfolio-mahmor/mahmor-mustapa/', // Set the correct base URL
+    baseURL: '/portfolio-mahmor/', // Set the correct base URL
   },
   shadcn: {
     /**

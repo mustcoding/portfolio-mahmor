@@ -15,13 +15,14 @@ development, this portfolio provides a sleek and professional online presence. `
 
 const front_end = ref("Vue.js + Nuxt.js");
 const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
-
+const config = useRuntimeConfig();
+const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "/image/myportfolio/main.jpg",
-  "/image/myportfolio/aboutme.jpg",
-  "/image/myportfolio/education.jpg",
-  "/image/myportfolio/portfolio.jpg",
-  "/image/myportfolio/interest.jpg",
+  "image/myportfolio/main.jpg",
+  "image/myportfolio/aboutme.jpg",
+  "image/myportfolio/education.jpg",
+  "image/myportfolio/portfolio.jpg",
+  "image/myportfolio/interest.jpg",
 ]);
 
 const show_detail = () => {
@@ -62,7 +63,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="image_path" class="rounded-lg w-auto" />
+                  <img :src="${basePath}image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

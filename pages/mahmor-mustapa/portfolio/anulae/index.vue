@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 import { X } from "lucide-vue-next";
 const showDetail = ref(false);
+const config = useRuntimeConfig();
+const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "/image/anulae/login.jpg",
-  "/image/anulae/homepage.jpg",
-  "/image/anulae/aid_application.jpg",
-  "/image/anulae/pengumuman.jpg",
+  "image/anulae/login.jpg",
+  "image/anulae/homepage.jpg",
+  "image/anulae/aid_application.jpg",
+  "image/anulae/pengumuman.jpg",
 ]);
 
 const title = ref(
@@ -69,7 +71,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="image_path" class="rounded-lg w-auto" />
+                  <img :src="${basePath}image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

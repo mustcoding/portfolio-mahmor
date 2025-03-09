@@ -1,30 +1,31 @@
 <script lang="ts" setup>
 import { Code, BookOpen, MapPlus, MonitorPlay, Dumbbell } from "lucide-vue-next";
-
+const config = useRuntimeConfig();
+const basePath = config.app.baseURL || "";
 const data = [
   {
     name: "My Portfolio",
-    image_path: "/image/myportfolio/main.jpg",
+    image_path: "image/myportfolio/main.jpg",
     path: "/mahmor-mustapa/portfolio/myportfolio",
   },
   {
     name: "Sistem Ahli KPPPSM",
-    image_path: "/image/kpppsm/login.jpg",
+    image_path: "image/kpppsm/login.jpg",
     path: "/mahmor-mustapa/portfolio/kpppsm",
   },
   {
     name: "Sistem Ahli ANULAE",
-    image_path: "/image/anulae/aid_application.jpg",
+    image_path: "image/anulae/aid_application.jpg",
     path: "/mahmor-mustapa/portfolio/anulae",
   },
   {
     name: "FYP Project",
-    image_path: "/image/fyp/homepage.jpg",
+    image_path: "image/fyp/homepage.jpg",
     path: "/mahmor-mustapa/portfolio/fyp",
   },
   {
     name: "MelakaGo",
-    image_path: "/image/melakago/homepage.jpg",
+    image_path: "image/melakago/homepage.jpg",
     path: "/mahmor-mustapa/portfolio/workshop",
   },
 ];
@@ -50,7 +51,7 @@ const data = [
               <div
                 class="border border-black w-full h-auto flex items-center justify-center"
               >
-                <img :src="data.image_path" class="w-full" />
+                <img :src="${basePath}data.image_path" class="w-full" />
               </div>
             </CardTitle>
             <CardDescription class="text-xl text-black font-medium">{{

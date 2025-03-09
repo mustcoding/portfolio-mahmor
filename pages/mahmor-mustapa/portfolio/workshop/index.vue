@@ -18,11 +18,12 @@ const mobile_app = ref("Flutter");
 const database = ref("MySQL Workbench");
 const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const api_testing = ref("Postman");
-
+const config = useRuntimeConfig();
+const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "/image/melakago/login.jpg",
-  "/image/melakago/homepage.jpg",
-  "/image/melakago/add_question.jpg",
+  "image/melakago/login.jpg",
+  "image/melakago/homepage.jpg",
+  "image/melakago/add_question.jpg",
 ]);
 
 const show_detail = () => {
@@ -67,7 +68,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="image_path" class="rounded-lg w-auto" />
+                  <img :src="${basePath}image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

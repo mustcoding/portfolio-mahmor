@@ -25,11 +25,11 @@ const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "image/kpppsm/login.jpg",
-  "image/kpppsm/dashboard.jpg",
-  "image/kpppsm/myKPPPSMcare.jpg",
-  "image/kpppsm/member.jpg",
-  "image/kpppsm/letter.jpg",
+  "/image/kpppsm/login.jpg",
+  "/image/kpppsm/dashboard.jpg",
+  "/image/kpppsm/myKPPPSMcare.jpg",
+  "/image/kpppsm/member.jpg",
+  "/image/kpppsm/letter.jpg",
 ]);
 
 const show_detail = () => {

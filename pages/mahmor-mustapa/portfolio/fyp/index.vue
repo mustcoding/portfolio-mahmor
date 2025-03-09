@@ -28,10 +28,10 @@ const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "image/fyp/login.jpg",
-  "image/fyp/homepage.jpg",
-  "image/fyp/attendance.jpg",
-  "image/fyp/registration.jpg",
+  "/image/fyp/login.jpg",
+  "/image/fyp/homepage.jpg",
+  "/image/fyp/attendance.jpg",
+  "/image/fyp/registration.jpg",
 ]);
 
 const show_detail = () => {

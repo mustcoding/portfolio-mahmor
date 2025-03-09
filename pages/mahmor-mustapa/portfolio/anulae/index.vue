@@ -5,10 +5,10 @@ const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "image/anulae/login.jpg",
-  "image/anulae/homepage.jpg",
-  "image/anulae/aid_application.jpg",
-  "image/anulae/pengumuman.jpg",
+  "/image/anulae/login.jpg",
+  "/image/anulae/homepage.jpg",
+  "/image/anulae/aid_application.jpg",
+  "/image/anulae/pengumuman.jpg",
 ]);
 
 const title = ref(

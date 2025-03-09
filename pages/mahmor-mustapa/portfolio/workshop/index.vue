@@ -21,9 +21,9 @@ const api_testing = ref("Postman");
 const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "/image/melakago/login.jpg",
-  "/image/melakago/homepage.jpg",
-  "/image/melakago/add_question.jpg",
+  "portfolio-mahmor/image/melakago/login.jpg",
+  "portfolio-mahmor/image/melakago/homepage.jpg",
+  "portfolio-mahmor/image/melakago/add_question.jpg",
 ]);
 
 const show_detail = () => {
@@ -68,7 +68,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="`${basePath}image_path`" class="rounded-lg w-auto" />
+                  <img :src="image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

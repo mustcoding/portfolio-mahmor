@@ -24,14 +24,12 @@ const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const facial_recognition = ref("MTCNN Library");
 const rfid = ref("Arduino");
 const api_testing = ref("Postman");
-const config = useRuntimeConfig();
-const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "/image/fyp/login.jpg",
-  "/image/fyp/homepage.jpg",
-  "/image/fyp/attendance.jpg",
-  "/image/fyp/registration.jpg",
+  "portfolio-mahmor/image/fyp/login.jpg",
+  "portfolio-mahmor/image/fyp/homepage.jpg",
+  "portfolio-mahmor/image/fyp/attendance.jpg",
+  "portfolio-mahmor/image/fyp/registration.jpg",
 ]);
 
 const show_detail = () => {
@@ -78,7 +76,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="`${basePath}image_path`" class="rounded-lg w-auto" />
+                  <img :src="image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

@@ -21,15 +21,13 @@ const front_end = ref("Vue.js + Nuxt.js");
 const database = ref("Laragon");
 const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const api_testing = ref("Postman");
-const config = useRuntimeConfig();
-const basePath = config.app.baseURL || "";
 
 const image_path = ref([
-  "/image/kpppsm/login.jpg",
-  "/image/kpppsm/dashboard.jpg",
-  "/image/kpppsm/myKPPPSMcare.jpg",
-  "/image/kpppsm/member.jpg",
-  "/image/kpppsm/letter.jpg",
+  "portfolio-mahmor/image/kpppsm/login.jpg",
+  "portfolio-mahmor/image/kpppsm/dashboard.jpg",
+  "portfolio-mahmor/image/kpppsm/myKPPPSMcare.jpg",
+  "portfolio-mahmor/image/kpppsm/member.jpg",
+  "portfolio-mahmor/image/kpppsm/letter.jpg",
 ]);
 
 const show_detail = () => {
@@ -73,7 +71,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="`${basePath}image_path`" class="rounded-lg w-auto" />
+                  <img :src="image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

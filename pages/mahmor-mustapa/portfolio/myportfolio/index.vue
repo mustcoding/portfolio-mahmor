@@ -18,11 +18,11 @@ const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "/image/myportfolio/main.jpg",
-  "/image/myportfolio/aboutme.jpg",
-  "/image/myportfolio/education.jpg",
-  "/image/myportfolio/portfolio.jpg",
-  "/image/myportfolio/interest.jpg",
+  "portfolio-mahmor/image/myportfolio/main.jpg",
+  "portfolio-mahmor/image/myportfolio/aboutme.jpg",
+  "portfolio-mahmor/image/myportfolio/education.jpg",
+  "portfolio-mahmor/image/myportfolio/portfolio.jpg",
+  "portfolio-mahmor/image/myportfolio/interest.jpg",
 ]);
 
 const show_detail = () => {
@@ -63,7 +63,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="`${basePath}image_path`" class="rounded-lg w-auto" />
+                  <img :src="image_path" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

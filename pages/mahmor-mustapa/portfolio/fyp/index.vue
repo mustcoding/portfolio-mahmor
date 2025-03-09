@@ -26,10 +26,10 @@ const rfid = ref("Arduino");
 const api_testing = ref("Postman");
 
 const image_path = ref([
-  "portfolio-mahmor/image/fyp/login.jpg",
-  "portfolio-mahmor/image/fyp/homepage.jpg",
-  "portfolio-mahmor/image/fyp/attendance.jpg",
-  "portfolio-mahmor/image/fyp/registration.jpg",
+  "/portfolio-mahmor/image/fyp/login.jpg",
+  "/portfolio-mahmor/image/fyp/homepage.jpg",
+  "/portfolio-mahmor/image/fyp/attendance.jpg",
+  "/portfolio-mahmor/image/fyp/registration.jpg",
 ]);
 
 const show_detail = () => {

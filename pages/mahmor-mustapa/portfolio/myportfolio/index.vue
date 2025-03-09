@@ -18,11 +18,11 @@ const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "portfolio-mahmor/image/myportfolio/main.jpg",
-  "portfolio-mahmor/image/myportfolio/aboutme.jpg",
-  "portfolio-mahmor/image/myportfolio/education.jpg",
-  "portfolio-mahmor/image/myportfolio/portfolio.jpg",
-  "portfolio-mahmor/image/myportfolio/interest.jpg",
+  "/portfolio-mahmor/image/myportfolio/main.jpg",
+  "/portfolio-mahmor/image/myportfolio/aboutme.jpg",
+  "/portfolio-mahmor/image/myportfolio/education.jpg",
+  "/portfolio-mahmor/image/myportfolio/portfolio.jpg",
+  "/portfolio-mahmor/image/myportfolio/interest.jpg",
 ]);
 
 const show_detail = () => {

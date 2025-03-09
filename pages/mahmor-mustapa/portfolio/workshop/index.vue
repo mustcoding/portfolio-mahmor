@@ -21,9 +21,9 @@ const api_testing = ref("Postman");
 const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const image_path = ref([
-  "portfolio-mahmor/image/melakago/login.jpg",
-  "portfolio-mahmor/image/melakago/homepage.jpg",
-  "portfolio-mahmor/image/melakago/add_question.jpg",
+  "/portfolio-mahmor/image/melakago/login.jpg",
+  "/portfolio-mahmor/image/melakago/homepage.jpg",
+  "/portfolio-mahmor/image/melakago/add_question.jpg",
 ]);
 
 const show_detail = () => {

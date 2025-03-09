@@ -23,11 +23,11 @@ const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const api_testing = ref("Postman");
 
 const image_path = ref([
-  "portfolio-mahmor/image/kpppsm/login.jpg",
-  "portfolio-mahmor/image/kpppsm/dashboard.jpg",
-  "portfolio-mahmor/image/kpppsm/myKPPPSMcare.jpg",
-  "portfolio-mahmor/image/kpppsm/member.jpg",
-  "portfolio-mahmor/image/kpppsm/letter.jpg",
+  "/portfolio-mahmor/image/kpppsm/login.jpg",
+  "/portfolio-mahmor/image/kpppsm/dashboard.jpg",
+  "/portfolio-mahmor/image/kpppsm/myKPPPSMcare.jpg",
+  "/portfolio-mahmor/image/kpppsm/member.jpg",
+  "/portfolio-mahmor/image/kpppsm/letter.jpg",
 ]);
 
 const show_detail = () => {

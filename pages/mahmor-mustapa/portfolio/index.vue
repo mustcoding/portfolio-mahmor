@@ -5,27 +5,27 @@ const basePath = config.app.baseURL || "";
 const data = [
   {
     name: "My Portfolio",
-    image_path: "portfolio-mahmor/image/myportfolio/main.jpg",
+    image_path: "/portfolio-mahmor/image/myportfolio/main.jpg",
     path: "/mahmor-mustapa/portfolio/myportfolio",
   },
   {
     name: "Sistem Ahli KPPPSM",
-    image_path: "portfolio-mahmor/image/kpppsm/login.jpg",
+    image_path: "/portfolio-mahmor/image/kpppsm/login.jpg",
     path: "/mahmor-mustapa/portfolio/kpppsm",
   },
   {
     name: "Sistem Ahli ANULAE",
-    image_path: "portfolio-mahmor/image/anulae/aid_application.jpg",
+    image_path: "/portfolio-mahmor/image/anulae/aid_application.jpg",
     path: "/mahmor-mustapa/portfolio/anulae",
   },
   {
     name: "FYP Project",
-    image_path: "portfolio-mahmor/image/fyp/homepage.jpg",
+    image_path: "/portfolio-mahmor/image/fyp/homepage.jpg",
     path: "/mahmor-mustapa/portfolio/fyp",
   },
   {
     name: "MelakaGo",
-    image_path: "portfolio-mahmor/image/melakago/homepage.jpg",
+    image_path: "/portfolio-mahmor/image/melakago/homepage.jpg",
     path: "/mahmor-mustapa/portfolio/workshop",
   },
 ];

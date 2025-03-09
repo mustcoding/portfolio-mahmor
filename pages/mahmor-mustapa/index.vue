@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-const config = useRuntimeConfig();
-const imagePath = `${config.app.baseURL}image/mahmor.jpg`;
 </script>
 
 <template>
@@ -12,7 +10,7 @@ const imagePath = `${config.app.baseURL}image/mahmor.jpg`;
         <Avatar
           class="w-52 h-52 mt-10 md:w-96 md:h-96 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
         >
-          <AvatarImage :src="imagePath" alt="@unovue" />
+          <AvatarImage src="/image/mahmor.jpg" alt="@unovue" />
           <AvatarFallback>MM</AvatarFallback>
         </Avatar>
       </div>

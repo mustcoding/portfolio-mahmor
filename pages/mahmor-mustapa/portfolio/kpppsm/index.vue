@@ -73,7 +73,7 @@ const show_detail = () => {
                   :key="image_path"
                   class="flex justify-center item-center w-full"
                 >
-                  <img :src="${basePath}image_path" class="rounded-lg w-auto" />
+                  <img :src="`${basePath}image_path`" class="rounded-lg w-auto" />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />

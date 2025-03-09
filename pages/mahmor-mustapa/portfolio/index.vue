@@ -51,7 +51,7 @@ const data = [
               <div
                 class="border border-black w-full h-auto flex items-center justify-center"
               >
-                <img :src="${basePath}data.image_path" class="w-full" />
+                <img :src="`${basePath}data.image_path`" class="w-full" />
               </div>
             </CardTitle>
             <CardDescription class="text-xl text-black font-medium">{{

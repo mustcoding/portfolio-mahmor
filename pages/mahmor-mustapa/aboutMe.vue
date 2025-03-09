@@ -4,7 +4,7 @@ const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "portfolio-mahmor/document/resume.pdf";
+  link.href = "/portfolio-mahmor/document/resume.pdf";
   link.download = "Mahmor_Mustapa_Resume.pdf";
   document.body.appendChild(link);
   link.click();

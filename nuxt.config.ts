@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     baseURL: '/portfolio-mahmor/',
   },
   nitro: {
-    preset: 'github_pages'
+    preset: 'github_pages',
+    serveStatic: true
   },
   ssr:false,
   shadcn: {

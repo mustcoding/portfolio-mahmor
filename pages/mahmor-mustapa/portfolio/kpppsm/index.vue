@@ -23,11 +23,11 @@ const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const api_testing = ref("Postman");
 
 const image_path = ref([
-  "image/kpppsm/login.jpg",
-  "image/kpppsm/dashboard.jpg",
-  "image/kpppsm/myKPPPSMcare.jpg",
-  "image/kpppsm/member.jpg",
-  "image/kpppsm/letter.jpg",
+  "/image/kpppsm/login.jpg",
+  "/image/kpppsm/dashboard.jpg",
+  "/image/kpppsm/myKPPPSMcare.jpg",
+  "/image/kpppsm/member.jpg",
+  "/image/kpppsm/letter.jpg",
 ]);
 
 const show_detail = () => {

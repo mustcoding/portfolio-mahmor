@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'github_pages',
-    serveStatic: true
   },
   ssr:false,
   shadcn: {

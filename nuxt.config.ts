@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github_pages'
   },
+  ssr:false,
   shadcn: {
     /**
      * Prefix for all the imported component

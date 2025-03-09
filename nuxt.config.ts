@@ -3,10 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
-  app: {
-    baseURL: "/mahmor-mustapa/",  // <-- Correct base URL
-    buildAssetsDir: "/_nuxt/",    // Ensure assets load correctly
-  },
   shadcn: {
     /**
      * Prefix for all the imported component

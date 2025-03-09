@@ -2,13 +2,11 @@
 import { X } from "lucide-vue-next";
 const showDetail = ref(false);
 
-const config = useRuntimeConfig();
-
 const image_path = ref([
-  `${config.app.baseURL}image/anulae/login.jpg`,
-  `${config.app.baseURL}image/anulae/homepage.jpg`,
-  `${config.app.baseURL}image/anulae/aid_application.jpg`,
-  `${config.app.baseURL}image/anulae/pengumuman.jpg`,
+  "/image/anulae/login.jpg",
+  "/image/anulae/homepage.jpg",
+  "/image/anulae/aid_application.jpg",
+  "/image/anulae/pengumuman.jpg",
 ]);
 
 const title = ref(

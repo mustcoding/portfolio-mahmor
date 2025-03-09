@@ -22,14 +22,12 @@ const database = ref("Laragon");
 const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const api_testing = ref("Postman");
 
-const config = useRuntimeConfig();
-
 const image_path = ref([
-  `${config.app.baseURL}image/kpppsm/login.jpg`,
-  `${config.app.baseURL}image/kpppsm/dashboard.jpg`,
-  `${config.app.baseURL}image/kpppsm/myKPPPSMcare.jpg`,
-  `${config.app.baseURL}image/kpppsm/member.jpg`,
-  `${config.app.baseURL}image/kpppsm/letter.jpg`,
+  "/image/kpppsm/login.jpg",
+  "/image/kpppsm/dashboard.jpg",
+  "/image/kpppsm/myKPPPSMcare.jpg",
+  "/image/kpppsm/member.jpg",
+  "/image/kpppsm/letter.jpg",
 ]);
 
 const show_detail = () => {

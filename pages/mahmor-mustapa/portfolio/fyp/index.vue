@@ -25,13 +25,11 @@ const facial_recognition = ref("MTCNN Library");
 const rfid = ref("Arduino");
 const api_testing = ref("Postman");
 
-const config = useRuntimeConfig();
-
 const image_path = ref([
-  `${config.app.baseURL}image/fyp/login.jpg`,
-  `${config.app.baseURL}image/fyp/homepage.jpg`,
-  `${config.app.baseURL}image/fyp/attendance.jpg`,
-  `${config.app.baseURL}image/fyp/registration.jpg`,
+  "/image/fyp/login.jpg",
+  "/image/fyp/homepage.jpg",
+  "/image/fyp/attendance.jpg",
+  "/image/fyp/registration.jpg",
 ]);
 
 const show_detail = () => {

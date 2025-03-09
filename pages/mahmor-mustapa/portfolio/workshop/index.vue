@@ -19,12 +19,10 @@ const database = ref("MySQL Workbench");
 const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const api_testing = ref("Postman");
 
-const config = useRuntimeConfig();
-
 const image_path = ref([
-  `${config.app.baseURL}image/melakago/login.jpg`,
-  `${config.app.baseURL}image/melakago/homepage.jpg`,
-  `${config.app.baseURL}image/melakago/add_question.jpg`,
+  "/image/melakago/login.jpg",
+  "/image/melakago/homepage.jpg",
+  "/image/melakago/add_question.jpg",
 ]);
 
 const show_detail = () => {

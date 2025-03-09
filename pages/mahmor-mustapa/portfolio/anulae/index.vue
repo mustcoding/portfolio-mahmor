@@ -3,10 +3,10 @@ import { X } from "lucide-vue-next";
 const showDetail = ref(false);
 
 const image_path = ref([
-  "/image/anulae/login.jpg",
-  "/image/anulae/homepage.jpg",
-  "/image/anulae/aid_application.jpg",
-  "/image/anulae/pengumuman.jpg",
+  "image/anulae/login.jpg",
+  "image/anulae/homepage.jpg",
+  "image/anulae/aid_application.jpg",
+  "image/anulae/pengumuman.jpg",
 ]);
 
 const title = ref(

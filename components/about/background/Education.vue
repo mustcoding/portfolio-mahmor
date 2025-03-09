@@ -18,7 +18,7 @@ const steps = [
     university: "Universiti Teknikal Malaysia Melaka (UTeM)",
     course: "Bachelor's of Computer Science (Software Development) with Honours",
     CGPA: "3.65",
-    image: "/image/utem.jpeg",
+    image: "image/utem.jpeg",
     description: [
       "Dean's Award Recipient (5 consecutive semesters 3-7)",
       "Gold Medalist for Workshop II Innovation Competition (MelakaGo)",
@@ -39,7 +39,7 @@ const steps = [
     year: "May, 2019 - May, 2021",
     university: "Kolej Matrikulasi Johor",
     course: "Science Module III",
-    image: "/image/kmj.jpeg",
+    image: "image/kmj.jpeg",
     CGPA: "3.83",
     description: [],
     sub_description: [],

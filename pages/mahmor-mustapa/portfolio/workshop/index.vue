@@ -20,9 +20,9 @@ const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const api_testing = ref("Postman");
 
 const image_path = ref([
-  "/image/melakago/login.jpg",
-  "/image/melakago/homepage.jpg",
-  "/image/melakago/add_question.jpg",
+  "image/melakago/login.jpg",
+  "image/melakago/homepage.jpg",
+  "image/melakago/add_question.jpg",
 ]);
 
 const show_detail = () => {

@@ -17,11 +17,11 @@ const front_end = ref("Vue.js + Nuxt.js");
 const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 
 const image_path = ref([
-  "/image/myportfolio/main.jpg",
-  "/image/myportfolio/aboutme.jpg",
-  "/image/myportfolio/education.jpg",
-  "/image/myportfolio/portfolio.jpg",
-  "/image/myportfolio/interest.jpg",
+  "image/myportfolio/main.jpg",
+  "image/myportfolio/aboutme.jpg",
+  "image/myportfolio/education.jpg",
+  "image/myportfolio/portfolio.jpg",
+  "image/myportfolio/interest.jpg",
 ]);
 
 const show_detail = () => {

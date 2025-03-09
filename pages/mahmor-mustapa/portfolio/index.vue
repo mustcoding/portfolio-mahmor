@@ -1,33 +1,42 @@
-<script lang="ts" setup>
-import { Code, BookOpen, MapPlus, MonitorPlay, Dumbbell } from "lucide-vue-next";
+<script setup>
+const config = useRuntimeConfig();
 
-const data = [
+// Fix the `data` array by dynamically updating image paths
+const data = computed(() => [
   {
     name: "My Portfolio",
-    image_path: "/image/myportfolio/main.jpg",
-    path: "/mahmor-mustapa/portfolio/myportfolio",
+    image_path: `${config.app.baseURL}image/myportfolio/main.jpg`,
+    path: `${config.app.baseURL}mahmor-mustapa/portfolio/myportfolio`,
   },
   {
     name: "Sistem Ahli KPPPSM",
-    image_path: "/image/kpppsm/login.jpg",
-    path: "/mahmor-mustapa/portfolio/kpppsm",
+    image_path: `${config.app.baseURL}image/kpppsm/login.jpg`,
+    path: `${config.app.baseURL}mahmor-mustapa/portfolio/kpppsm`,
   },
   {
     name: "Sistem Ahli ANULAE",
-    image_path: "/image/anulae/aid_application.jpg",
-    path: "/mahmor-mustapa/portfolio/anulae",
+    image_path: `${config.app.baseURL}image/anulae/aid_application.jpg`,
+    path: `${config.app.baseURL}mahmor-mustapa/portfolio/anulae`,
   },
   {
     name: "FYP Project",
-    image_path: "/image/fyp/homepage.jpg",
-    path: "/mahmor-mustapa/portfolio/fyp",
+    image_path: `${config.app.baseURL}image/fyp/homepage.jpg`,
+    path: `${config.app.baseURL}mahmor-mustapa/portfolio/fyp`,
   },
   {
     name: "MelakaGo",
-    image_path: "/image/melakago/homepage.jpg",
-    path: "/mahmor-mustapa/portfolio/workshop",
+    image_path: `${config.app.baseURL}image/melakago/homepage.jpg`,
+    path: `${config.app.baseURL}mahmor-mustapa/portfolio/workshop`,
   },
-];
+]);
+
+// Fix the `image_path` ref array
+const image_path = ref([
+  `${config.app.baseURL}image/anulae/login.jpg`,
+  `${config.app.baseURL}image/anulae/homepage.jpg`,
+  `${config.app.baseURL}image/anulae/aid_application.jpg`,
+  `${config.app.baseURL}image/anulae/pengumuman.jpg`,
+]);
 </script>
 
 <template>

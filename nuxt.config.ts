@@ -3,9 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
-  app: {
-    baseURL: '/portfolio-mahmor/', // Important for GitHub Pages
-  },
   shadcn: {
     /**
      * Prefix for all the imported component

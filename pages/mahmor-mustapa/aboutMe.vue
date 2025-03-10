@@ -34,7 +34,7 @@ const openLinkedIn = () => {
             class="w-52 h-52 mt-10 md:w-96 md:h-96 shadow-[0_0_10px_rgba(255,223,0,0.8)]"
           >
             <AvatarImage
-              :src="`${basePath}/image/mahmor.jpg`"
+              :src="`${basePath}/image/mahmor2.jpg`"
               alt="@unovue"
               class="object-cover rounded-full"
             />

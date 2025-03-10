@@ -42,7 +42,7 @@ const data = [
         class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 place-items-center p-10 gap-4 w-full"
       >
         <Card
-          class="bg-yellow-600 border border-yellow-800 w-full h-auto sm:w-90 flex flex-col justify-center items-center text-center cursor-pointer"
+          class="bg-yellow-600 border border-yellow-800 w-full h-auto sm:w-90 flex flex-col justify-center items-center text-center cursor-pointer hover:opacity-80"
           v-for="data in data"
           @click="navigateTo(data.path)"
         >

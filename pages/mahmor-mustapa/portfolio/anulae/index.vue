@@ -27,6 +27,7 @@ const front_end = ref("Vue.js + Nuxt.js");
 const database = ref("Laragon");
 const web_design = ref(["HTML", "Tailwind CSS", "Shadcn-Vue"]);
 const api_testing = ref("Postman");
+const year = ref("2024");
 
 const show_detail = () => {
   showDetail.value = !showDetail.value;
@@ -36,24 +37,24 @@ const show_detail = () => {
   <Layout>
     <div class="flex flex-col min-h-screen gap-4 w-full mb-10">
       <div class="p-100">
-        <div class="flex justify-between">
-          <Button class="w-36 cursor-pointer" @click="show_detail"
-            >Project Details</Button
-          >
-          <Button @click="navigateTo('/mahmor-mustapa/portfolio')"><X /></Button>
+        <div class="flex justify-end">
+          <Button
+            @click="navigateTo('/mahmor-mustapa/portfolio')"
+            class="shadow-[0_0_4px_rgba(255,223,0,0.8)]"
+            ><X
+          /></Button>
         </div>
-        <div v-if="showDetail">
-          <PortfolioDescription
-            :title="title"
-            :category="category"
-            :overview="overview"
-            :front_end="front_end"
-            :database="database"
-            :web_design="web_design"
-            :api_testing="api_testing"
-          />
-          <hr class="border-t-2 border-white opacity-50" />
-        </div>
+        <PortfolioDescription
+          :title="title"
+          :category="category"
+          :overview="overview"
+          :front_end="front_end"
+          :database="database"
+          :web_design="web_design"
+          :api_testing="api_testing"
+          :year="year"
+        />
+        <hr class="border-t-2 border-white opacity-50" />
       </div>
       <div class="flex justify-center items-center w-full">
         <Card

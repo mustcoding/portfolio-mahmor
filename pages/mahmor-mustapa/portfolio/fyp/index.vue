@@ -24,6 +24,23 @@ const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const facial_recognition = ref("MTCNN Library");
 const rfid = ref("Arduino");
 const api_testing = ref("Postman");
+const year = ref("2024");
+
+const url = ref([
+  { name: "Web App", path: "https://github.com/mustcoding/SchoolAttendanceWeb_FYP.git" },
+  {
+    name: "Mobile App",
+    path: "https://github.com/mustcoding/school_attendance_system_fyp_apps.git",
+  },
+  {
+    name: "Facial Recognition",
+    path: "https://github.com/mustcoding/FacialRecognition_FYP.git",
+  },
+  {
+    name: "Arduino RFID",
+    path: "https://github.com/mustcoding/Arduino_AttendanceSystem.git",
+  },
+]);
 
 const image_path = ref([
   "/portfolio-mahmor/image/fyp/login.jpg",
@@ -31,36 +48,33 @@ const image_path = ref([
   "/portfolio-mahmor/image/fyp/attendance.jpg",
   "/portfolio-mahmor/image/fyp/registration.jpg",
 ]);
-
-const show_detail = () => {
-  showDetail.value = !showDetail.value;
-};
 </script>
 <template>
   <Layout>
     <div class="flex flex-col min-h-screen gap-10 w-full mb-10">
       <div class="p-100">
-        <div class="flex justify-between">
-          <Button class="w-36 cursor-pointer" @click="show_detail"
-            >Project Details</Button
-          >
-          <Button @click="navigateTo('/mahmor-mustapa/portfolio')"><X /></Button>
+        <div class="flex justify-end">
+          <Button
+            @click="navigateTo('/mahmor-mustapa/portfolio')"
+            class="shadow-[0_0_4px_rgba(255,223,0,0.8)]"
+            ><X
+          /></Button>
         </div>
-        <div v-if="showDetail">
-          <PortfolioDescription
-            :title="title"
-            :category="category"
-            :overview="overview"
-            :mobile_app="mobile_app"
-            :back_end="back_end"
-            :facial_recognition="facial_recognition"
-            :rfid="rfid"
-            :database="database"
-            :web_design="web_design"
-            :api_testing="api_testing"
-          />
-          <hr class="border-t-2 border-white opacity-50" />
-        </div>
+        <PortfolioDescription
+          :title="title"
+          :category="category"
+          :overview="overview"
+          :mobile_app="mobile_app"
+          :back_end="back_end"
+          :facial_recognition="facial_recognition"
+          :rfid="rfid"
+          :database="database"
+          :web_design="web_design"
+          :api_testing="api_testing"
+          :year="year"
+          :url="url"
+        />
+        <hr class="border-t-2 border-white opacity-50" />
       </div>
       <div class="flex justify-center items-center w-full">
         <Card

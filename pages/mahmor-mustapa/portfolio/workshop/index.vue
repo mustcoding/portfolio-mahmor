@@ -18,6 +18,7 @@ const mobile_app = ref("Flutter");
 const database = ref("MySQL Workbench");
 const web_design = ref(["HTML", "CSS", "Bootstrap"]);
 const api_testing = ref("Postman");
+const year = ref("2023");
 const config = useRuntimeConfig();
 const basePath = config.app.baseURL || "";
 const image_path = ref([
@@ -26,33 +27,38 @@ const image_path = ref([
   "/portfolio-mahmor/image/melakago/add_question.jpg",
 ]);
 
-const show_detail = () => {
-  showDetail.value = !showDetail.value;
-};
+const url = ref([
+  { name: "Web App", path: "https://github.com/mustcoding/NewMelakaGoWeb.git" },
+  {
+    name: "Mobile App Company",
+    path: "https://github.com/mustcoding/melakago_company.git",
+  },
+]);
 </script>
 <template>
   <Layout>
     <div class="flex flex-col min-h-screen gap-10 w-full mb-10">
       <div class="p-100">
-        <div class="flex justify-between">
-          <Button class="w-36 cursor-pointer" @click="show_detail"
-            >Project Details</Button
-          >
-          <Button @click="navigateTo('/mahmor-mustapa/portfolio')"><X /></Button>
+        <div class="flex justify-end">
+          <Button
+            @click="navigateTo('/mahmor-mustapa/portfolio')"
+            class="shadow-[0_0_4px_rgba(255,223,0,0.8)]"
+            ><X
+          /></Button>
         </div>
-        <div v-if="showDetail">
-          <PortfolioDescription
-            :title="title"
-            :category="category"
-            :overview="overview"
-            :web_design="web_design"
-            :back_end="back_end"
-            :mobile_app="mobile_app"
-            :database="database"
-            :api_testing="api_testing"
-          />
-          <hr class="border-t-2 border-white opacity-50" />
-        </div>
+        <PortfolioDescription
+          :title="title"
+          :category="category"
+          :overview="overview"
+          :web_design="web_design"
+          :back_end="back_end"
+          :mobile_app="mobile_app"
+          :database="database"
+          :api_testing="api_testing"
+          :year="year"
+          :url="url"
+        />
+        <hr class="border-t-2 border-white opacity-50" />
       </div>
       <div class="flex justify-center items-center w-full">
         <Card

@@ -13,11 +13,6 @@ import { Menu } from "lucide-vue-next";
         >About Me</Button
       >
       <Button
-        @click="navigateTo('/mahmor-mustapa/interest')"
-        class="drop-shadow-[0_0_2px_rgba(255,223,0,0.8)]"
-        >Interest</Button
-      >
-      <Button
         @click="navigateTo('/mahmor-mustapa/portfolio')"
         class="drop-shadow-[0_0_2px_rgba(255,223,0,0.8)]"
         >Portfolio</Button
@@ -35,7 +30,6 @@ import { Menu } from "lucide-vue-next";
           <SheetHeader class="mt-10">
             <Button @click="navigateTo('/')">Home</Button>
             <Button @click="navigateTo('/mahmor-mustapa/aboutMe')">About Me</Button>
-            <Button @click="navigateTo('/mahmor-mustapa/interest')">Interest</Button>
             <Button @click="navigateTo('/mahmor-mustapa/portfolio')">Portfolio</Button>
             <Button @click="navigateTo('/mahmor-mustapa/contact')">Contact</Button>
           </SheetHeader>

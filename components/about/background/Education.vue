@@ -17,21 +17,14 @@ const steps = [
     year: "Sept, 2021 - Mar, 2025",
     university: "Universiti Teknikal Malaysia Melaka (UTeM)",
     course: "Bachelor's of Computer Science (Software Development) with Honours",
-    CGPA: "3.65",
+    CGPA: "3.67",
     image: "/portfolio-mahmor/image/utem.jpeg",
     description: [
-      "Dean's Award Recipient (5 consecutive semesters 3-7)",
-      "Gold Medalist for Workshop II Innovation Competition (MelakaGo)",
-      "Microsoft Certified Power BI Data Analyst Associate",
-      "Google Cloud Computing Badges Holder",
-      "Facilitator Experience",
+      "Dean's Award, UTeM – five semesters (2022/2023 Sem 1 & 2; 2023/2024 Sem 1, 2 & 3)",
+      "Gold Medal, Workshop II Innovation Competition (MelakaGo) – UTeM, January 2024",
+      "Google Cloud Computing Badges – Google Cloud, 2024",
     ],
-    sub_description: [
-      "Micro:bit Workshop at SK Durian Tunggal (Sept, 2024)",
-      "Micro:bit Workshop at SK Tanjung Minyak (Aug, 2024)",
-      "Helping Class Workshop 1 (Oct, 2023 & Mar, 2023)",
-      "Scratch for STEM Week at MRSM Muar (June, 2023)",
-    ],
+    sub_description: [],
   },
 
   {

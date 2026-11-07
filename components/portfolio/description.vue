@@ -13,6 +13,9 @@ defineProps([
   "rfid",
   "year",
   "url",
+  "company",
+  "tech",
+  "highlights",
 ]);
 
 const viewProject = (path: string) => {
@@ -28,6 +31,12 @@ const viewProject = (path: string) => {
       <div class="flex flex-col gap-4">
         <h1 class="text-xl font-bold">Overview</h1>
         <h1 class="text-justify">{{ overview }}</h1>
+        <div v-for="group in highlights" :key="group.title" class="flex flex-col gap-2 mt-2">
+          <h2 class="text-lg font-bold text-yellow-500">{{ group.title }}</h2>
+          <ul class="list-disc ml-6 space-y-1 text-justify">
+            <li v-for="(point, index) in group.points" :key="index">{{ point }}</li>
+          </ul>
+        </div>
       </div>
       <div class="flex flex-col gap-4">
         <h1 class="text-xl font-bold">Project Info</h1>
@@ -35,8 +44,13 @@ const viewProject = (path: string) => {
           <h1 class="font-bold">Year:</h1>
           <h1>{{ year }}</h1>
         </div>
+        <div v-if="company" class="flex gap-2">
+          <h1 class="font-bold">Company:</h1>
+          <h1>{{ company }}</h1>
+        </div>
         <h1 class="font-bold">Tech Stack:</h1>
         <ul class="list-disc ml-8">
+          <li v-for="item in tech" :key="item.label">{{ item.label }}: {{ item.value }}</li>
           <li v-if="back_end">Back-end: {{ back_end }}</li>
           <li v-if="mobile_app">Mobile App: {{ mobile_app }}</li>
           <li v-if="database">Database: {{ database }}</li>
@@ -44,8 +58,8 @@ const viewProject = (path: string) => {
             <div class="flex flex-wrap gap-1">
               <p class="whitespace-nowrap">Web Design:</p>
               <div class="flex flex-wrap gap-1 min-w-0">
-                <span v-for="(web_design, index) in web_design" :key="index">
-                  {{ web_design }}<span v-if="index !== web_design.length - 1">,</span>
+                <span v-for="(item, index) in web_design" :key="index">
+                  {{ item }}<span v-if="index !== web_design.length - 1">,</span>
                 </span>
               </div>
             </div>

@@ -9,22 +9,57 @@ import {
   StepperTitle,
   StepperTrigger,
 } from "@/components/ui/stepper";
-import { Check, Circle, Dot } from "lucide-vue-next";
 
-const steps = [
+type Step = {
+  step: number;
+  year: string;
+  title: string;
+  company: string;
+  image?: string;
+  contain?: boolean;
+  initials: string;
+  points: string[];
+};
+
+const steps: Step[] = [
   {
     step: 1,
-    year: "Oct, 2024 - Mar, 2025",
-    title: "Software Developer Intern",
+    year: "October, 2025 - Present",
+    title: "Analyst, System Development",
+    company: "Microlink Solutions Berhad, Kuala Lumpur",
+    image: "/portfolio-mahmor/image/microlink.png",
+    contain: true,
+    initials: "ML",
+    points: [
+      "Develop, enhance and maintain modules of the RHB Bank core hire purchase (HP) and Islamic financing (IF) system on the bank's core platform, using C#/.NET, Java, Pro*C, Oracle SQL, ASP.NET Web Forms and JavaScript.",
+      "Perform root cause analysis of SIT, UAT and production defects across the ASP.NET front-end, C# middleware and Java host layers through code tracing, debugging and Oracle data validation.",
+      "Design technical solutions for change requests and document them in Engineering Design Documents (EDD) and unit test results, with source control in Git and defect tracking in Mantis.",
+    ],
+  },
+  {
+    step: 2,
+    year: "March, 2025 - September, 2025",
+    title: "Junior Software Developer",
     company: "Alto Soft Sdn. Bhd.",
-    description:
-      "1) Sistem Ahli KPPPSM (Full-Stack) & Sistem Ahli ANULAE (Front-End) using (Vue.js, Tailwind CSS, Shadcn-Vue, Laravel, Nuxt.js)",
-    sub_description: [
-      "Contributed to the development of new web application product for Kesatuan Pembantu Pembedahan Pergigian Semalaysia (KPPPSM).",
-      "Replaced a traditional paper-based process with an efficient online system.",
-      "Designed a modern and mobile-friendly interface using Tailwind CSS.",
-      "Integrated Laravel for secure data handling and back-end processing.",
-      "Utilized Shadcn-Vue to build reusable and scalable UI components.",
+    image: "/portfolio-mahmor/image/altosoft.jpeg",
+    initials: "AS",
+    points: [
+      "Developed and maintained full-stack web application systems for government and association clients using Laravel, Vue.js, Tailwind CSS, Shadcn-vue and Bootstrap.",
+      "Built new modules and delivered change requests, including development of two modules for the Kementerian Kerja Raya MyINFRA system in a Docker-based microservices architecture.",
+      "Performed preventive maintenance, server monitoring, code reviews and debugging, and logged defects for resolution.",
+    ],
+  },
+  {
+    step: 3,
+    year: "October, 2024 - March, 2025",
+    title: "Software Developer (Intern)",
+    company: "Alto Soft Sdn. Bhd.",
+    image: "/portfolio-mahmor/image/altosoft.jpeg",
+    initials: "AS",
+    points: [
+      "Contributed to the development of new web systems for two associations, replacing paper-based processes with online systems.",
+      "Built mobile-friendly interfaces with Tailwind CSS and reusable Shadcn-vue components.",
+      "Integrated Laravel back-end processing for secure data handling.",
     ],
   },
 ];
@@ -56,10 +91,17 @@ const steps = [
             :class="['ring-2 ring-ring ring-offset-2 ring-offset-background']"
           >
             <img
-              src="/image/altosoft.jpeg"
-              alt="Profile"
-              class="w-full h-full object-cover rounded-full"
+              v-if="step.image"
+              :src="step.image"
+              :alt="step.company"
+              class="w-full h-full rounded-full"
+              :class="step.contain ? 'object-cover bg-white scale-110' : 'object-cover'"
             />
+            <span
+              v-else
+              class="w-full h-full rounded-full bg-yellow-600 text-black text-xl font-bold flex items-center justify-center"
+              >{{ step.initials }}</span
+            >
           </Button>
         </StepperTrigger>
 
@@ -78,9 +120,8 @@ const steps = [
             :class="[state === 'active' && 'text-primary']"
             class="text-xs text-muted-foreground transition lg:text-sm text-justify"
           >
-            <p class="text-white">{{ step.description }}</p>
-            <ul class="text-white list-disc ml-4">
-              <li v-for="(item, index) in step.sub_description" :key="index">
+            <ul class="text-white list-disc ml-4 mt-2 space-y-1">
+              <li v-for="(item, index) in step.points" :key="index">
                 {{ item }}
               </li>
             </ul>

@@ -1,40 +1,75 @@
 <script lang="ts" setup>
-import { Progress } from "@/components/ui/progress"; // Import the Progress component
-
-const skills = [
-  { label: "C++", content: "C++", percentage: 70 },
-  { label: "JavaScript", content: "JavaScript", percentage: 85 },
-  { label: "PHP", content: "PHP", percentage: 85 },
-  { label: "Java", content: "Java", percentage: 60 },
-  { label: "Dart", content: "Dart", percentage: 65 },
-  { label: "HTML", content: "HTML", percentage: 90 },
-  { label: "CSS", content: "CSS", percentage: 73 },
-  { label: "Tailwind CSS", content: "Tailwind CSS", percentage: 85 },
-  { label: "Bootstrap", content: "Bootstrap", percentage: 85 },
-  { label: "Vue.js", content: "Vue.js", percentage: 85 },
-  { label: "Nuxt.js", content: "Nuxt.js", percentage: 85 },
-  { label: "Flutter", content: "Flutter", percentage: 65 },
-  { label: "Shadcn-Vue", content: "Shadcn-Vue", percentage: 90 },
-  { label: "Laravel", content: "Laravel", percentage: 85 },
-  { label: "REST APIs", content: "REST APIs", percentage: 90 },
-  { label: "SQL", content: "SQL", percentage: 85 },
-  { label: "GitLab", content: "GitLab", percentage: 85 },
-  { label: "GitHub", content: "GitHub", percentage: 85 },
-  { label: "Jira", content: "Jira", percentage: 85 },
-  { label: "Postman", content: "Postman", percentage: 90 },
-  { label: "Figma", content: "Figma", percentage: 90 },
+const categories: { title: string; skills: string[] }[] = [
+  {
+    title: "Languages & Frameworks",
+    skills: [
+      "C#",
+      ".NET",
+      "ASP.NET Web Forms",
+      "VB.NET",
+      "Java",
+      "Spring Boot",
+      "C",
+      "Pro*C",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "Vue.js",
+      "Nuxt.js",
+      "Flutter",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Shadcn-vue",
+    ],
+  },
+  {
+    title: "Databases & Tools",
+    skills: [
+      "Oracle SQL",
+      "MySQL",
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Docker",
+      "Mantis",
+      "Jira",
+      "Postman",
+      "GDB",
+    ],
+  },
+  {
+    title: "Other",
+    skills: [
+      "REST/JSON APIs",
+      "Microservices",
+      "Batch Processing",
+      "IBM Server Environments",
+      "Technical Documentation (EDD)",
+      "SIT/UAT Support",
+      "Software Testing",
+    ],
+  },
+  {
+    title: "Languages",
+    skills: ["Malay", "English"],
+  },
 ];
 </script>
 
 <template>
-  <div class="flex flex-col md:grid grid-cols-2 mt-14 gap-10 mb-14">
-    <div class="flex gap-10" v-for="(skill, index) in skills" :key="index">
-      <div class="flex items-center w-full gap-4">
-        <span class="text-left w-36 font-bold"> {{ skill.label }} </span>
-        <div class="w-full">
-          <Progress :model-value="skill.percentage" />
-        </div>
-        <span class="text-right w-20 font-bold"> {{ skill.percentage }}% </span>
+  <div class="flex flex-col mt-14 gap-10 mb-14">
+    <div v-for="category in categories" :key="category.title">
+      <h2 class="text-lg font-bold text-yellow-500 mb-4">{{ category.title }}</h2>
+      <div class="flex flex-wrap gap-3">
+        <span
+          v-for="skill in category.skills"
+          :key="skill"
+          class="rounded-full border border-yellow-600 px-4 py-1.5 text-sm font-semibold text-white shadow-[0_0_4px_rgba(255,223,0,0.4)]"
+        >
+          {{ skill }}
+        </span>
       </div>
     </div>
   </div>

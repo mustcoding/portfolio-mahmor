@@ -28,7 +28,8 @@ const basePath = config.app.baseURL || "";
           Hello,
         </p>
         <h1 class="text-yellow-600 text-4xl md:text-5xl font-bold">I'm Mahmor Mustapa</h1>
-        <p class="text-yellow-600 text-2xl mt-2">Full-stack Software Developer</p>
+        <p class="text-yellow-600 text-2xl mt-2">Software Developer</p>
+        <p class="text-yellow-600 text-lg mt-1">Enterprise Banking &amp; Government Systems</p>
       </div>
     </div>
   </Layout>

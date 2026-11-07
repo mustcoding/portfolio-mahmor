@@ -5,7 +5,7 @@ const data = [
   { icon: Phone, name: "Phone", text: "011-15009757" },
   { icon: MessageCircle, name: "Whatsapp", text: "https://wa.me/" },
   { icon: Mail, name: "Email", text: "mahmormust@gmail.com" },
-  { icon: MapPinHouse, name: "Address", text: "Batu Pahat, Johor" },
+  { icon: MapPinHouse, name: "Address", text: "Kuala Lumpur" },
 ];
 
 const handleClick = (item: { name: string; text: string }) => {

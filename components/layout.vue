@@ -1,6 +1,6 @@
 <template>
   <BackgroundColorBackground>
-    <div class="bg-black text-foreground flex-1 overflow-y-auto max-h-screen">
+    <div class="bg-black text-foreground flex-1 overflow-y-auto overflow-x-hidden max-h-screen">
       <span
         class="bg-black flex items-center gap-4 px-4 h-[72px] lg:px-6 sticky top-0 z-10 w-full"
       >

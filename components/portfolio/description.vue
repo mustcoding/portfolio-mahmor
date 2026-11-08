@@ -23,15 +23,19 @@ const viewProject = (path: string) => {
 };
 </script>
 <template>
-  <div class="flex flex-col text-white w-full p-8 gap-4">
-    <h1 class="text-xl font-bold">{{ title }}</h1>
+  <div class="flex flex-col text-white w-full md:p-8 gap-4">
+    <h1 class="text-xl font-bold mt-4">{{ title }}</h1>
     <p class="font-medium">Category - {{ category }}</p>
     <hr class="border-t-2 border-white opacity-50" />
     <div class="flex flex-col gap-8 sm:grid grid-cols-[1.5fr_1fr] sm:gap-20">
       <div class="flex flex-col gap-4">
         <h1 class="text-xl font-bold">Overview</h1>
         <h1 class="text-justify">{{ overview }}</h1>
-        <div v-for="group in highlights" :key="group.title" class="flex flex-col gap-2 mt-2">
+        <div
+          v-for="group in highlights"
+          :key="group.title"
+          class="flex flex-col gap-2 mt-2"
+        >
           <h2 class="text-lg font-bold text-yellow-500">{{ group.title }}</h2>
           <ul class="list-disc ml-6 space-y-1 text-justify">
             <li v-for="(point, index) in group.points" :key="index">{{ point }}</li>
@@ -50,7 +54,9 @@ const viewProject = (path: string) => {
         </div>
         <h1 class="font-bold">Tech Stack:</h1>
         <ul class="list-disc ml-8">
-          <li v-for="item in tech" :key="item.label">{{ item.label }}: {{ item.value }}</li>
+          <li v-for="item in tech" :key="item.label">
+            {{ item.label }}: {{ item.value }}
+          </li>
           <li v-if="back_end">Back-end: {{ back_end }}</li>
           <li v-if="mobile_app">Mobile App: {{ mobile_app }}</li>
           <li v-if="database">Database: {{ database }}</li>

@@ -27,7 +27,7 @@ const openLinkedIn = () => {
         <h1 class="text-xl">MAIN INFO</h1>
         <h1 class="font-bold text-3xl">ABOUT ME</h1>
       </div>
-      <div class="space-y-10 lg:grid grid-cols-2 place-items-center p-10">
+      <div class="space-y-10 lg:grid grid-cols-2 place-items-center md:p-10">
         <!-- Avatar -->
         <div class="flex flex-col gap-5 justify-center items-center">
           <Avatar

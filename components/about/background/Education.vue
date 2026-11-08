@@ -44,6 +44,7 @@ const steps = [
   <div class="w-full min-h-screen overflow-y-auto">
     <Stepper
       orientation="vertical"
+      :linear="false"
       class="mx-auto flex w-full p-2 md:px-10 flex-col justify-center items-center gap-10 relative mt-14"
     >
       <StepperItem
@@ -56,7 +57,7 @@ const steps = [
         <StepperSeparator
           v-if="step.step !== steps[steps.length - 1].step"
           :class="[
-            'absolute left-[36px] top-[38px] block h-[105%] w-0.5 shrink-0 rounded-full',
+            'absolute left-10 -translate-x-1/2 top-20 block h-[105%] w-0.5 shrink-0 rounded-full',
             '!bg-white',
           ]"
         />
@@ -64,7 +65,7 @@ const steps = [
         <StepperTrigger as-child>
           <Button
             size="icon"
-            class="z-10 rounded-full shrink-0 w-20 h-20 pointer-event-none"
+            class="relative z-10 rounded-full shrink-0 w-20 h-20 disabled:opacity-100"
             :class="['ring-2 ring-ring ring-offset-2 ring-offset-background']"
           >
             <img
@@ -75,10 +76,10 @@ const steps = [
           </Button>
         </StepperTrigger>
 
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-1 min-w-0 flex-1">
           <StepperTitle
             :class="[state === 'active' && 'text-primary']"
-            class="text-sm font-semibold transition lg:text-base"
+            class="text-sm font-semibold transition lg:text-base whitespace-normal"
           >
             <div class="flex flex-col">
               <p class="text-red-400">{{ step.year }}</p>
